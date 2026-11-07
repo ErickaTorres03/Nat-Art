@@ -177,7 +177,7 @@
         return items.map((item, index) => `
             <article class="product-card group overflow-hidden rounded-xl bg-white transition hover:-translate-y-1 hover:shadow-lg" style="--card-order:${index % 12}">
                 <button class="product-image-button" type="button" data-image="${item.image}" data-title="${item.typeLabel} ${item.categoryLabel}">
-                    <img src="${item.image}" alt="${item.typeLabel} ${item.categoryLabel}" loading="lazy" decoding="async">
+                    <img src="${item.image}" alt="${item.typeLabel} ${item.categoryLabel}" loading="lazy">
                     <span class="product-type-badge">${item.typeLabel}</span>
                     <span class="image-action" aria-hidden="true">↗</span>
                 </button>
@@ -404,7 +404,7 @@
             function resetTimer() {
                 window.clearInterval(timerId);
                 if (!manuallyPaused && !pointerOverHero && !document.hidden) {
-                    timerId = window.setInterval(() => showSlide(currentSlide + 1), 900);
+                    timerId = window.setInterval(() => showSlide(currentSlide + 1), 1500);
                 }
                 pauseButton.innerHTML = manuallyPaused ? `
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-player-play">
