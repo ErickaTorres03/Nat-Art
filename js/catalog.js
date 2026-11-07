@@ -44,7 +44,7 @@ window.productCatalog = [
         'WhatsApp Image 2026-11-02 at 8.45.12 PM.jpeg',
         'WhatsApp Image 2026-10-27 at 10.51.26 PM.jpeg',
     ] },
-    { type: 'polos', category: 'Amigos', files: [
+    { type: 'polos', category: 'amigos', files: [
         'WhatsApp Image 2026-11-06 at 10.01.40 PM (1).jpeg',
         'WhatsApp Image 2026-11-06 at 10.01.43 PM (1).jpeg',
     ] },

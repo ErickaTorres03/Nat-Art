@@ -134,7 +134,7 @@
                 </a>`;
         }).join('');
 
-        const featuredCategories = ['pareja', 'cumpleaños', 'graduacion', 'mujer', 'navidad', 'snoppy', 'personalizado', 'Amigos', 'hombre'];
+        const featuredCategories = ['pareja', 'cumpleaños', 'graduacion', 'mujer', 'navidad', 'snoppy', 'personalizado', 'amigos', 'hombre'];
         const featured = featuredCategories.map((category, index) => {
             const item = products.find((product) => product.category === category);
             if (!item) return '';
