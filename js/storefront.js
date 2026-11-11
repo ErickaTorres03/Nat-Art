@@ -169,7 +169,7 @@
                 </video>
                 <div class="promo-video-copy">
                     <p class="eyebrow"><span></span> Nat Art · detalles con historia</p>
-                    <h2 id="promo-video-heading">Tu idea,hecha para<br><em>regalar.</em></h2>
+                    <h2 id="promo-video-heading">Tu idea, hecha para<br><em>regalar.</em></h2>
                     <p>Un diseño pensado por ti puede convertir cualquier momento en un recuerdo inolvidable.</p>
                     <a class="promo-video-link" href="https://wa.me/51985925137" target="_blank" rel="noopener noreferrer">
                         Cuéntanos tu idea <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
@@ -177,11 +177,11 @@
                 </div>
             </section>
             <section class="steps-section" aria-labelledby="steps-heading">
-                <div class="steps-intro"><p class="eyebrow"><span></span> Simple y personal</p><h2 id="steps-heading">De la idea al <em>detalle.</em></h2><p>Explora, elige y revisa cada diseño con calma.</p></div>
+                <div class="steps-intro"><p class="eyebrow"><span></span> Compra por WhatsApp</p><h2 id="steps-heading">De la idea al <em>detalle.</em></h2><p>Elige tu diseño y escríbenos para coordinar los cambios, el adelanto y el envío.</p></div>
                 <div class="steps-list">
-                    <article class="step-item"><span>01</span><div><h3>Encuentra una colección</h3><p>Explora las carpetas por ocasión y estilo.</p></div></article>
-                    <article class="step-item"><span>02</span><div><h3>Elige taza o polo</h3><p>Filtra el catálogo según el formato que buscas.</p></div></article>
-                    <article class="step-item"><span>03</span><div><h3>Acércate al diseño</h3><p>Abre cualquier imagen para verla en grande.</p></div></article>
+                    <article class="step-item"><span>01</span><div><h3>Envía tu diseño</h3><p>Escríbenos por WhatsApp con la captura del producto y cuéntanos qué detalles quieres modificar.</p></div></article>
+                    <article class="step-item"><span>02</span><div><h3>Confirma el adelanto</h3><p>Para iniciar el pedido, abona por Yape el 50% del precio del producto.</p></div></article>
+                    <article class="step-item"><span>03</span><div><h3>Coordina la entrega</h3><p>Cuando esté listo, coordinamos la entrega o el envío a cualquier parte del Perú.</p></div></article>
                 </div>
             </section>`;
     }
@@ -190,7 +190,11 @@
         if (!items.length) {
             return '<p class="empty-state">No encontramos diseños con esos filtros. Prueba otra búsqueda.</p>';
         }
-        return items.map((item, index) => `
+        return items.map((item, index) => {
+            const advance = (item.price / 2).toFixed(2);
+            const message = `Hola, quiero consultar por el diseño ${item.typeLabel} ${item.categoryLabel}. Precio publicado: S/ ${item.price.toFixed(2)}; adelanto referencial (50%): S/ ${advance}. Te enviaré la captura y los cambios que deseo. ¿Me confirmas el costo de envío a [mi ciudad]?`;
+            const whatsappUrl = `https://wa.me/51985925137?text=${encodeURIComponent(message)}`;
+            return `
             <article class="product-card group overflow-hidden rounded-xl bg-white transition hover:-translate-y-1 hover:shadow-lg" style="--card-order:${index % 12}">
                 <button class="product-image-button" type="button" data-image="${item.image}" data-title="${item.typeLabel} ${item.categoryLabel}">
                     <img src="${item.image}" alt="${item.typeLabel} ${item.categoryLabel}" loading="lazy">
@@ -205,7 +209,8 @@
                         <button class="text-action" type="button" data-image="${item.image}" data-title="${item.typeLabel} ${item.categoryLabel}">Ver diseño <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span></button>
                     </div>
                 </div>
-            </article>`).join('');
+            </article>`;
+        }).join('');
     }
 
     function mount() {
