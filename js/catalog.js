@@ -11,7 +11,6 @@ window.productCatalog = [
         'WhatsApp Image 2026-11-02 at 9.05.10 PM.jpeg',
         'WhatsApp Image 2026-11-02 at 9.05.08 PM.jpeg',
         'WhatsApp Image 2026-10-27 at 8.29.45 PM.jpeg',
-        'WhatsApp Image 2026-10-27 at 8.23.36 PM.jpeg',
         'WhatsApp Image 2026-11-06 at 10.00.01 PM (1).jpeg',
         'WhatsApp Image 2026-11-06 at 10.00.01 PM.jpeg',
         'WhatsApp Image 2026-11-06 at 10.00.02 PM (2).jpeg',
