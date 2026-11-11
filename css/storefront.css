@@ -2245,6 +2245,13 @@ a {
     }
 }
 
+@media (max-width: 680px) {
+    .promo-video-section {
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+}
+
 
 
 
