@@ -160,6 +160,19 @@
                     <button class="featured-arrow featured-arrow-next" type="button" aria-label="Ver más ideas">→</button>
                 </div>
             </section>
+            <section class="promo-video-section" aria-labelledby="promo-video-heading">
+                <video class="promo-video-background" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+                    <source src="videos/tasas/anime.mp4" type="video/mp4">
+                </video>
+                <div class="promo-video-copy">
+                    <p class="eyebrow"><span></span> Nat Art · detalles con historia</p>
+                    <h2 id="promo-video-heading">Tu idea,hecha para<br><em>regalar.</em></h2>
+                    <p>Un diseño pensado por ti puede convertir cualquier momento en un recuerdo inolvidable.</p>
+                    <a class="promo-video-link" href="https://wa.me/51985925137" target="_blank" rel="noopener noreferrer">
+                        Cuéntanos tu idea <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </section>
             <section class="steps-section" aria-labelledby="steps-heading">
                 <div class="steps-intro"><p class="eyebrow"><span></span> Simple y personal</p><h2 id="steps-heading">De la idea al <em>detalle.</em></h2><p>Explora, elige y revisa cada diseño con calma.</p></div>
                 <div class="steps-list">
