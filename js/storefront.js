@@ -26,6 +26,8 @@
     })));
 
     const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const categoryCollator = new Intl.Collator('es', { sensitivity: 'base' });
+    const compareCategories = (left, right) => categoryCollator.compare(labels[left] || left, labels[right] || right);
     const currentPage = decodeURIComponent(location.pathname.split('/').pop() || 'index.html')
         .replace(/\.html$/i, '');
     const requestedCategory = new URLSearchParams(location.search).get('categoria') || currentPage;
@@ -106,7 +108,7 @@
     updatePageMetadata();
 
     function categoryLinks() {
-        const categories = [...new Set(catalog.map((group) => group.category))];
+        const categories = [...new Set(catalog.map((group) => group.category))].sort(compareCategories);
         return categories.map((category) => `
             <button class="category-chip" type="button" data-category="${category}">
                 ${labels[category] || category}<span>${products.filter((item) => item.category === category).length}</span>
@@ -283,15 +285,15 @@
                                 <span class="ct-go" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                             </a>
 
-                            <a class="ct-item ct-ig" href="https://www.instagram.com/creativeprints.pe/" target="_blank" rel="noopener noreferrer">
+                            <a class="ct-item ct-ig" target="_blank" rel="noopener noreferrer">
                                 <span class="ct-icon" aria-hidden="true">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg>
                                 </span>
-                                <span class="ct-text"><small>Instagram</small><strong>@creativeprints.pe</strong></span>
+                                <span class="ct-text"><small>Instagram</small><strong>@Nat-Art</strong></span>
                                 <span class="ct-go" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                             </a>
 
-                            <a class="ct-item ct-fb" href="https://www.facebook.com/creativeprints.pe/" target="_blank" rel="noopener noreferrer">
+                            <a class="ct-item ct-fb" target="_blank" rel="noopener noreferrer">
                                 <span class="ct-icon" aria-hidden="true">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8.5h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3.2h2.5V21h3.2v-6.8H16l.5-3.2h-2.8V8.9c0-.2.1-.4.3-.4z"/></svg>
                                 </span>
@@ -320,8 +322,8 @@
                         <div>
                             <span class="footer-label">Contacto</span>
                             <a href="https://wa.me/51985925137" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                            <a href="https://www.instagram.com/creativeprints.pe/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                            <a href="https://www.facebook.com/creativeprints.pe/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                            <a href="https://www.instagram.com/nat.art/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://www.facebook.com/nat.art/" target="_blank" rel="noopener noreferrer">Facebook</a>
                         </div>
                     </div>
                 </div>
@@ -540,7 +542,7 @@
             function updateGrid() {
             const query = normalize(search.value.trim());
             const typeProducts = products.filter((item) => !selectedType || item.type === selectedType);
-            const availableCategories = [...new Set(typeProducts.map((item) => item.category))];
+            const availableCategories = [...new Set(typeProducts.map((item) => item.category))].sort(compareCategories);
             if (selectedCategory && availableCategories.includes(selectedCategory)) {
                 categoryPage = Math.floor(availableCategories.indexOf(selectedCategory) / categoriesPerPage);
             }
