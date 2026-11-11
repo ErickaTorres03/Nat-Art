@@ -129,7 +129,7 @@
                     <span class="format-copy">
                         <span class="format-kicker">${item.typeLabel} personalizados</span>
                         <strong>${name}</strong>
-                        <span class="format-bottom"><span>Desde S/ ${price.toFixed(2)}</span><span class="format-arrow" aria-hidden="true">↗</span></span>
+                        <span class="format-bottom"><span>Desde S/ ${price.toFixed(2)}</span><span class="format-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span></span>
                     </span>
                 </a>`;
         }).join('');
@@ -141,7 +141,7 @@
             return `
                 <a class="featured-collection" href="index.html?vista=catalogo&categoria=${encodeURIComponent(category)}">
                     <span class="featured-image"><img src="${item.image}" alt="Diseño de ${item.categoryLabel}" loading="lazy"><span>${String(index + 1).padStart(2, '0')}</span></span>
-                    <span class="featured-caption"><strong>${item.categoryLabel}</strong><span>Ver colección ↗</span></span>
+                    <span class="featured-caption"><strong>${item.categoryLabel}</strong><span>Ver colección <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span></span>
                 </a>`;
         }).join('');
 
@@ -169,7 +169,7 @@
                     <h2 id="promo-video-heading">Tu idea,hecha para<br><em>regalar.</em></h2>
                     <p>Un diseño pensado por ti puede convertir cualquier momento en un recuerdo inolvidable.</p>
                     <a class="promo-video-link" href="https://wa.me/51985925137" target="_blank" rel="noopener noreferrer">
-                        Cuéntanos tu idea <span aria-hidden="true">↗</span>
+                        Cuéntanos tu idea <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                     </a>
                 </div>
             </section>
@@ -192,14 +192,14 @@
                 <button class="product-image-button" type="button" data-image="${item.image}" data-title="${item.typeLabel} ${item.categoryLabel}">
                     <img src="${item.image}" alt="${item.typeLabel} ${item.categoryLabel}" loading="lazy">
                     <span class="product-type-badge">${item.typeLabel}</span>
-                    <span class="image-action" aria-hidden="true">↗</span>
+                    <span class="image-action" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                 </button>
                 <div class="product-info">
                     <div class="product-meta"><span>${item.categoryLabel}</span></div>
                     <h3>${item.typeLabel} ${categoryCopy[item.category] || 'personalizada'}</h3>
                     <div class="product-bottom">
                         <div class="product-price"><span>Precio</span><strong>S/ ${item.price.toFixed(2)}</strong></div>
-                        <button class="text-action" type="button" data-image="${item.image}" data-title="${item.typeLabel} ${item.categoryLabel}">Ver diseño <span>↗</span></button>
+                        <button class="text-action" type="button" data-image="${item.image}" data-title="${item.typeLabel} ${item.categoryLabel}">Ver diseño <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span></button>
                     </div>
                 </div>
             </article>`).join('');
@@ -270,7 +270,7 @@
                             <h2 id="contact-heading">Hablemos de tu <em>idea.</em></h2>
                             <p>Elige tu canal favorito y cuéntanos qué detalle tienes en mente.</p>
                             <a class="ct-cta" href="https://wa.me/51985925137" target="_blank" rel="noopener noreferrer">
-                                Escribir ahora <span aria-hidden="true">↗</span>
+                                Escribir ahora <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                             </a>
                         </div>
 
@@ -280,7 +280,7 @@
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.5L3 21z"/><path d="M9 8.5c.3 2.5 3 5.2 5.5 5.5l1.2-1.2-2-1-.8.8c-.8-.4-1.8-1.4-2.2-2.2l.8-.8-1-2L9 8.5z"/></svg>
                                 </span>
                                 <span class="ct-text"><small>WhatsApp</small><strong>+51 985 925 137</strong></span>
-                                <span class="ct-go" aria-hidden="true">↗</span>
+                                <span class="ct-go" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                             </a>
 
                             <a class="ct-item ct-ig" href="https://www.instagram.com/creativeprints.pe/" target="_blank" rel="noopener noreferrer">
@@ -288,7 +288,7 @@
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg>
                                 </span>
                                 <span class="ct-text"><small>Instagram</small><strong>@creativeprints.pe</strong></span>
-                                <span class="ct-go" aria-hidden="true">↗</span>
+                                <span class="ct-go" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                             </a>
 
                             <a class="ct-item ct-fb" href="https://www.facebook.com/creativeprints.pe/" target="_blank" rel="noopener noreferrer">
@@ -296,7 +296,7 @@
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8.5h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3.2h2.5V21h3.2v-6.8H16l.5-3.2h-2.8V8.9c0-.2.1-.4.3-.4z"/></svg>
                                 </span>
                                 <span class="ct-text"><small>Facebook</small><strong>Nat Art - Sublimación</strong></span>
-                                <span class="ct-go" aria-hidden="true">↗</span>
+                                <span class="ct-go" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg></span>
                             </a>
                         </div>
                     </div>

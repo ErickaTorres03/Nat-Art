@@ -908,6 +908,11 @@ a {
     transition: border-color .2s, color .2s;
 }
 
+.category-chip[hidden],
+.collection-more[hidden] {
+    display: none;
+}
+
 .category-chip span {
     display: none;
 }
