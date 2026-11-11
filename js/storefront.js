@@ -120,7 +120,8 @@
 
     function homeSections() {
         const formatCards = ['tazas', 'polos'].map((type) => {
-            const item = products.find((product) => product.type === type);
+            const item = products.find((product) => product.type === type
+                && (type === 'tazas' ? product.category === 'pareja' : product.category === 'Stitch'));
             if (!item) return '';
             const name = type === 'tazas' ? 'Tazas que cuentan historias' : 'Polos para llevar tu estilo';
             const price = type === 'tazas' ? 15 : 30;
