@@ -328,8 +328,8 @@
                         <div>
                             <span class="footer-label">Contacto</span>
                             <a href="https://wa.me/51985925137" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                            <a href="https://www.instagram.com/nat.art/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                            <a href="https://www.facebook.com/nat.art/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                            <a  target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a  target="_blank" rel="noopener noreferrer">Facebook</a>
                         </div>
                     </div>
                 </div>
