@@ -2229,7 +2229,7 @@ a {
     .promo-video-section {
         min-height: clamp(500px, 76svh, 680px);
         align-items: flex-end;
-        padding: 64px 7vw;
+        padding: 100px 7vw;
     }
 
     .promo-video-copy {
